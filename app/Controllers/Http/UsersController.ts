@@ -15,7 +15,7 @@ export default class UsersController {
                               .from('users')
                               .where('username', username)
       if (findByUsername) {
-        return response.status(400).json({ error: 'username already exists' })
+        return response.status(400).json({ error: 'Username already exists.' })
       }
 
       const user = await User.create({
