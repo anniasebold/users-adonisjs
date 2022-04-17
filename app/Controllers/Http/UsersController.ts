@@ -6,7 +6,7 @@ export default class UsersController {
       const { username, name } = request.body();
 
       if(!username) {
-        return response.status(400).json({ error: 'username is required' })
+        return response.status(400).json({ error: 'Username is required' })
       }
 
       const [findByUsername] = await User
